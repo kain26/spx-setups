@@ -27,8 +27,8 @@ export function Brand({ tone = "dark" }: { tone?: ShellTone }) {
 export function SiteHeader({ tone = "dark", locale = "en", languageHref }: { tone?: ShellTone; locale?: SiteLocale; languageHref?: string }) {
   const paper = tone === "paper";
   const labels = locale === "zh"
-    ? { setups: "5 Setups", gate: "交易门禁", nav: "主导航", language: "EN" }
-    : { setups: "5 Setups", gate: "Trade Gate", nav: "Primary navigation", language: "中文" };
+    ? { setups: "5 Setups", nav: "主导航", language: "EN" }
+    : { setups: "5 Setups", nav: "Primary navigation", language: "中文" };
 
   return (
     <header className={`sticky top-0 z-50 border-b backdrop-blur-xl ${paper ? "border-[#30343a]/18 bg-[#e9e9e5]/92" : "border-white/10 bg-[#09090a]/88"}`}>
@@ -36,7 +36,6 @@ export function SiteHeader({ tone = "dark", locale = "en", languageHref }: { ton
         <Brand tone={tone} />
         <nav className="hidden items-center gap-8 md:flex" aria-label={labels.nav}>
           <Link className={paper ? "nav-link nav-link-paper" : "nav-link"} href={locale === "zh" ? "/?lang=zh#setups" : "/#setups"}>{labels.setups}</Link>
-          <Link className={paper ? "nav-link nav-link-paper" : "nav-link"} href="/setup">{labels.gate}</Link>
         </nav>
         <Button
           asChild
