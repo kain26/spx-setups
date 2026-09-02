@@ -92,7 +92,6 @@ export const hardRules: Record<HomeLocale, string[][]> = {
     ["ALIGN", "Execute only when GEX, VWAP, and price action align."],
     ["MAX LOSS", "Fix maximum loss before entry; never add to a loser."],
     ["TIME STOP", "Exit a long-premium trade after 3–5 one-minute candles without follow-through."],
-    ["SELLER", "For a 5-point spread, collect at least 2.50; take 50% or exit after 130 minutes."],
     ["15:00 ET", "No new positions. Do not bet on the final 30 minutes of gamma."],
   ],
   zh: [
@@ -100,7 +99,6 @@ export const hardRules: Record<HomeLocale, string[][]> = {
     ["ALIGN", "GEX + VWAP + Price Action 同向才执行。"],
     ["MAX LOSS", "入场前固定满亏；亏损仓不加码。"],
     ["TIME STOP", "买方 3–5 根 1m K 无延续，退出。"],
-    ["SELLER", "5 点宽 ≥ 2.50；50% 止盈或 130 分钟退出。"],
     ["15:00 ET", "不再开新仓，不赌最后 30 分钟 Gamma。"],
   ],
 };
