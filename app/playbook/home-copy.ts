@@ -14,7 +14,7 @@ export const setupCopyEn: Record<string, SetupSummary> = {
     fiveMinute: "A 5m candle closes back inside the level.",
     oneMinute: "The first retest holds; trigger above or below the micro pivot.",
   },
-  "break-hold": {
+  "break-and-hold": {
     subtitle: "Break → accept → hold",
     case: "Price accepts beyond the level instead of snapping back.",
     fiveMinute: "A 5m close holds outside with follow-through.",
