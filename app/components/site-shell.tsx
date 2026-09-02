@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 type ShellTone = "dark" | "paper";
 type SiteLocale = "en" | "zh";
 
+const COMPASS_URL =
+  "https://spx-price-action-compass-773950940183.europe-west2.run.app/";
+
 function BrandMark({ paper }: { paper: boolean }) {
   return (
     <svg viewBox="0 0 32 32" className="size-8" aria-hidden="true">
@@ -68,11 +71,13 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
         disclaimer: "仅供学习，非投资建议。",
         x: "在 X 关注 @mm_options",
         community: "MYSPX",
+        compass: "SPX 罗盘",
       }
     : {
         disclaimer: "Education only. Not advice.",
         x: "Follow @mm_options on X",
         community: "MYSPX",
+        compass: "SPX Compass",
       };
 
   const mark = `inline-flex size-7 items-center justify-center border transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${paper ? "border-[#30343a]/16 text-[#30343a]/50 hover:border-[#c65f38] hover:text-[#c65f38]" : "border-white/12 text-white/50 hover:border-orange-400 hover:text-orange-400"}`;
@@ -84,6 +89,22 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
           {labels.disclaimer}
         </p>
         <div className="flex shrink-0 items-center gap-1.5">
+          <a
+            className={mark}
+            href={COMPASS_URL}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={labels.compass}
+            title={labels.compass}
+          >
+            <img
+              src="/spx-compass-logo.png"
+              alt=""
+              width={16}
+              height={16}
+              className="h-4 w-4 rounded-full object-cover"
+            />
+          </a>
           <a
             className={mark}
             href="https://myspx.trade"
