@@ -1567,14 +1567,12 @@ a {
   display: flex;
   min-height: 2.75rem;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.75rem;
   margin-top: 0.5rem;
   margin-bottom: 1.25rem;
   border-top: 1px solid rgba(48, 52, 58, 0.16);
   padding-block: 1rem;
-  color: rgba(48, 52, 58, 0.4);
-  font-size: 0.8rem;
-  letter-spacing: 0.01em;
+  color: rgba(48, 52, 58, 0.52);
   text-decoration: none;
   transition: color 160ms ease;
 }
@@ -1585,13 +1583,30 @@ a {
 }
 
 .mono-community-note img {
-  width: 1.1rem;
+  width: 1.15rem;
   height: auto;
   flex: none;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .mono-community-note:hover img,
 .mono-community-note:focus-visible img {
   opacity: 1;
+}
+
+.mono-community-note strong {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: -0.01em;
+}
+
+.mono-community-note em {
+  display: block;
+  margin-top: 0.18rem;
+  font-size: 0.72rem;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  opacity: 0.72;
 }

@@ -170,7 +170,10 @@ export default async function SetupLessonPage({
                 className="h-4 w-auto"
                 style={{ imageRendering: "pixelated" }}
               />
-              <span>欢迎加入 MYSPX 会员社区</span>
+              <span>
+                <strong>当天墙位、入场点、AI 把握</strong>
+                <em>盘前期权墙 · 雷神趋势 · 秃鹰震荡</em>
+              </span>
             </a>
           </div>
         ) : null}
