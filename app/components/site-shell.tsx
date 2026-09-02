@@ -5,20 +5,33 @@ import { Button } from "@/components/ui/button";
 type ShellTone = "dark" | "paper";
 type SiteLocale = "en" | "zh";
 
+function BrandMark({ paper }: { paper: boolean }) {
+  return (
+    <svg viewBox="0 0 32 32" className="size-8" aria-hidden="true">
+      <rect
+        x="1"
+        y="1"
+        width="30"
+        height="30"
+        fill="none"
+        stroke={paper ? "#30343a" : "rgba(255,255,255,.22)"}
+        strokeOpacity={paper ? 0.28 : 1}
+        strokeWidth="1"
+      />
+      <rect x="15" y="5" width="2" height="22" fill="#c65f38" />
+      <rect x="11" y="10" width="10" height="11" fill="#c65f38" />
+    </svg>
+  );
+}
+
 export function Brand({ tone = "dark" }: { tone?: ShellTone }) {
   const paper = tone === "paper";
 
   return (
     <Link href="/" className="group flex items-center gap-3" aria-label="SPX Setups home">
-      <span className={`grid size-8 place-items-center border ${paper ? "border-[#30343a]/20 bg-[#30343a]/[.03]" : "border-white/16 bg-white/[.04]"}`}>
-        <svg viewBox="0 0 24 24" className="size-4" aria-hidden="true">
-          <path d="M3 17.5 8.4 11l3.7 3.4L21 5.8" fill="none" stroke="#c65f38" strokeWidth="2.2" strokeLinecap="square" />
-          <path d="M16.5 5.8H21v4.5" fill="none" stroke="#c65f38" strokeWidth="2.2" />
-        </svg>
-      </span>
-      <span>
-        <span className={`block text-sm font-semibold tracking-[.12em] ${paper ? "text-[#30343a]" : "text-white"}`}>SPX SETUPS</span>
-        <span className={`block font-mono text-[8px] tracking-[.14em] ${paper ? "text-[#30343a]/45" : "text-white/30"}`}>5M → 1M</span>
+      <BrandMark paper={paper} />
+      <span className={`text-sm font-semibold tracking-[.12em] ${paper ? "text-[#30343a]" : "text-white"}`}>
+        SPX SETUPS
       </span>
     </Link>
   );
