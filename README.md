@@ -41,6 +41,20 @@ Production build:
 npm run build
 ```
 
+### Deploy to Cloudflare Workers
+
+The repository includes a root `wrangler.jsonc` for vinext's generated Worker output:
+
+```bash
+npm run deploy
+```
+
+For Cloudflare Workers Builds, set **Deploy command** to `npm run deploy`.
+The build is included in that command, so the separate **Build command** may be left blank.
+
+Do not run the OpenNext migration. This project uses vinext and produces
+`dist/server`, not Next.js's `.next` directory.
+
 ### Links
 
 - Community: [myspx.trade](https://myspx.trade)
@@ -88,6 +102,20 @@ npm run dev
 ```bash
 npm run build
 ```
+
+### 部署到 Cloudflare Workers
+
+仓库根目录已经包含适配 vinext 构建产物的 `wrangler.jsonc`，部署命令使用：
+
+```bash
+npm run deploy
+```
+
+使用 Cloudflare Workers Builds 时，将 **Deploy command** 设置为
+`npm run deploy`。构建步骤已经包含在该命令中，单独的 **Build command** 可以留空。
+
+不要运行 OpenNext migration。本项目使用 vinext，输出目录是
+`dist/server`，不会生成标准 Next.js 的 `.next` 目录。
 
 ### 链接
 
