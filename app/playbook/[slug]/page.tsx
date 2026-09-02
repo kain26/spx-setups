@@ -154,6 +154,27 @@ export default async function SetupLessonPage({
           </div>
         </section>
 
+        {setup.slug === "compression-expansion" ? (
+          <div className="page-shell">
+            <a
+              href="https://myspx.trade"
+              target="_blank"
+              rel="noreferrer"
+              className="mono-community-note"
+            >
+              <img
+                src="/myspx-logo.png"
+                alt=""
+                width={18}
+                height={16}
+                className="h-4 w-auto"
+                style={{ imageRendering: "pixelated" }}
+              />
+              <span>欢迎加入 MYSPX 会员社区</span>
+            </a>
+          </div>
+        ) : null}
+
         <nav className="page-shell mono-lesson-pagination" aria-label="Setup lessons">
           {previous ? (
             <Link href={`/playbook/${previous.slug}`} className="mono-lesson-nav">

@@ -1563,43 +1563,35 @@ a {
   }
 }
 
-.compass-logo {
-  display: block;
-  border-radius: 999px;
-  object-fit: cover;
-  background: #0b1c3a;
-}
-
-.mono-compass-row {
+.mono-community-note {
   display: flex;
-  min-height: 4.5rem;
+  min-height: 2.75rem;
   align-items: center;
-  gap: 1rem;
-  border: 1px solid rgba(48, 52, 58, 0.22);
-  padding: 0.85rem 1.15rem;
-  color: inherit;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  border-top: 1px solid rgba(48, 52, 58, 0.16);
+  padding-block: 1rem;
+  color: rgba(48, 52, 58, 0.4);
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  transition: border-color 160ms ease;
+  transition: color 160ms ease;
 }
 
-.mono-compass-row:hover,
-.mono-compass-row:focus-visible {
-  border-color: var(--mono-accent);
+.mono-community-note:hover,
+.mono-community-note:focus-visible {
+  color: var(--mono-accent);
 }
 
-.mono-compass-row strong {
-  display: block;
-  font-family: var(--mono-display);
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-style: normal;
-  letter-spacing: -0.02em;
+.mono-community-note img {
+  width: 1.1rem;
+  height: auto;
+  flex: none;
+  opacity: 0.7;
 }
 
-.mono-compass-row em {
-  display: block;
-  margin-top: 0.2rem;
-  color: rgba(48, 52, 58, 0.62);
-  font-size: 0.88rem;
-  font-style: normal;
+.mono-community-note:hover img,
+.mono-community-note:focus-visible img {
+  opacity: 1;
 }
