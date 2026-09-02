@@ -1562,3 +1562,44 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.compass-logo {
+  display: block;
+  border-radius: 999px;
+  object-fit: cover;
+  background: #0b1c3a;
+}
+
+.mono-compass-row {
+  display: flex;
+  min-height: 4.5rem;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(48, 52, 58, 0.22);
+  padding: 0.85rem 1.15rem;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 160ms ease;
+}
+
+.mono-compass-row:hover,
+.mono-compass-row:focus-visible {
+  border-color: var(--mono-accent);
+}
+
+.mono-compass-row strong {
+  display: block;
+  font-family: var(--mono-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: -0.02em;
+}
+
+.mono-compass-row em {
+  display: block;
+  margin-top: 0.2rem;
+  color: rgba(48, 52, 58, 0.62);
+  font-size: 0.88rem;
+  font-style: normal;
+}

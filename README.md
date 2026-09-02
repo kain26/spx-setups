@@ -63,6 +63,7 @@ Do not run the OpenNext migration. This project uses vinext and produces
 
 - Community: [myspx.trade](https://myspx.trade)
 - X: [@mm_options](https://x.com/mm_options)
+- SPX Compass: [live](https://spx-price-action-compass-773950940183.europe-west2.run.app/) · [GitHub](https://github.com/kain26/SPX-Price-Action-Compass)
 
 ### Disclaimer
 
@@ -127,6 +128,7 @@ npm run deploy
 
 - 社区主站：[myspx.trade](https://myspx.trade)
 - X：[@mm_options](https://x.com/mm_options)
+- SPX 罗盘：[在线](https://spx-price-action-compass-773950940183.europe-west2.run.app/) · [GitHub](https://github.com/kain26/SPX-Price-Action-Compass)
 
 ### 风险声明
 

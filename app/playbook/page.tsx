@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import { SiteFooter, SiteHeader } from "@/app/components/site-shell";
+import { SiteFooter, SiteHeader, CompassInvite } from "@/app/components/site-shell";
 import { decisionRows, hardRules, homeCopy, setupCopyEn, type HomeLocale } from "@/app/playbook/home-copy";
 import { setups } from "@/app/playbook/setups";
 
@@ -135,6 +135,12 @@ export default async function PlaybookPage({ searchParams }: PlaybookPageProps) 
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="mono-section">
+          <div className="page-shell">
+            <CompassInvite locale={locale} />
           </div>
         </section>
       </main>
