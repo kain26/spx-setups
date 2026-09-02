@@ -52,12 +52,12 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
   const paper = tone === "paper";
   const labels = locale === "zh"
     ? {
-        disclaimer: "教育与研究用途，不构成投资建议。SPX 0DTE 具有极高风险，任何交易都应预先定义最大亏损。",
+        disclaimer: "仅供学习，非投资建议。",
         x: "在 X 关注 @mm_options",
         community: "MYSPX",
       }
     : {
-        disclaimer: "For education and research only. Not investment advice. SPX 0DTE carries extreme risk; define maximum loss before every trade.",
+        disclaimer: "Education only. Not advice.",
         x: "Follow @mm_options on X",
         community: "MYSPX",
       };
