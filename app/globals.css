@@ -607,6 +607,7 @@ a {
   --mono-paper: #e9e9e5;
   --mono-ink: #30343a;
   --mono-accent: #c65f38;
+  --mono-hair: rgba(48, 52, 58, 0.1);
   --mono-display: "Iowan Old Style", "Songti SC", STSong, Georgia, serif;
   min-height: 100vh;
   background: var(--mono-paper);
@@ -636,7 +637,7 @@ a {
 }
 
 .mono-cover {
-  border-bottom: 1px solid rgba(48, 52, 58, 0.24);
+  border-bottom: 1px solid var(--mono-hair);
   padding-block: 2.7rem 4.5rem;
 }
 
@@ -644,7 +645,6 @@ a {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  border-bottom: 1px solid rgba(48, 52, 58, 0.22);
   padding-bottom: 0.85rem;
   color: rgba(48, 52, 58, 0.56);
   font-family: var(--font-mono);
@@ -686,7 +686,6 @@ a {
 
 .mono-cover-count {
   align-self: stretch;
-  border-left: 1px solid rgba(48, 52, 58, 0.22);
   padding-left: 1.4rem;
 }
 
@@ -716,8 +715,8 @@ a {
 }
 
 .mono-section {
-  border-bottom: 1px solid rgba(48, 52, 58, 0.2);
-  padding-block: 4.5rem;
+  border-bottom: 1px solid var(--mono-hair);
+  padding-block: 4rem;
 }
 
 .mono-section-quiet {
@@ -759,7 +758,7 @@ a {
 
 .mono-setup-list {
   margin-top: 3rem;
-  border-top: 1px solid var(--mono-ink);
+  border-top: 1px solid var(--mono-hair);
 }
 
 .mono-setup-row {
@@ -768,7 +767,7 @@ a {
   grid-template-columns: minmax(13rem, 1.45fr) minmax(9rem, 0.9fr) minmax(18rem, 1.8fr) auto;
   align-items: center;
   gap: 2rem;
-  border-bottom: 1px solid rgba(48, 52, 58, 0.24);
+  border-bottom: 1px solid var(--mono-hair);
   padding-block: 1.75rem;
   color: var(--mono-ink);
   transition:
@@ -866,15 +865,17 @@ a {
 
 .mono-case-table {
   margin-top: 2.6rem;
-  border-top: 1px solid var(--mono-ink);
 }
 
 .mono-case-row {
   display: grid;
   grid-template-columns: 4rem 0.9fr 1.45fr 1.15fr;
   gap: 1.3rem;
-  border-bottom: 1px solid rgba(48, 52, 58, 0.24);
   padding-block: 1.05rem;
+}
+
+.mono-case-row + .mono-case-row {
+  border-top: 1px solid var(--mono-hair);
 }
 
 .mono-case-row > span {
@@ -912,7 +913,7 @@ a {
 }
 
 .mono-rules-list {
-  border-top: 1px solid var(--mono-ink);
+  border-top: none;
 }
 
 .mono-rule-row {
@@ -920,8 +921,11 @@ a {
   grid-template-columns: 2.2rem 8.2rem 1fr;
   align-items: baseline;
   gap: 1rem;
-  border-bottom: 1px solid rgba(48, 52, 58, 0.24);
-  padding-block: 1rem;
+  padding-block: 0.95rem;
+}
+
+.mono-rule-row + .mono-rule-row {
+  border-top: 1px solid var(--mono-hair);
 }
 
 .mono-rule-row > span,
@@ -965,8 +969,7 @@ a {
 }
 
 .mono-lesson-cover {
-  border-bottom: 1px solid rgba(48, 52, 58, 0.24);
-  padding-block: 2rem 4rem;
+  padding-block: 2rem 1.6rem;
 }
 
 .mono-lesson-grid {
@@ -974,8 +977,8 @@ a {
   grid-template-columns: 9rem minmax(0, 1fr) minmax(15rem, 19rem);
   align-items: end;
   gap: 2.5rem;
-  min-height: 17rem;
-  padding-top: 2rem;
+  min-height: 0;
+  padding-top: 1.6rem;
 }
 
 .mono-lesson-number {
@@ -1006,12 +1009,11 @@ a {
 
 .mono-lesson-filters {
   display: grid;
-  gap: 1rem;
+  gap: 1.15rem;
 }
 
 .mono-lesson-filters > div {
-  border-top: 1px solid rgba(48, 52, 58, 0.24);
-  padding-top: 0.7rem;
+  padding-top: 0;
 }
 
 .mono-lesson-filters dt {
@@ -1029,12 +1031,11 @@ a {
 }
 
 .mono-execution-section {
-  padding-top: 3.6rem;
+  padding-top: 1.1rem;
 }
 
 .mono-execution-sheet {
-  margin-top: 2.8rem;
-  border-block: 1px solid var(--mono-ink);
+  margin-top: 0;
 }
 
 .mono-market-case {
@@ -1042,8 +1043,7 @@ a {
   grid-template-columns: 12rem minmax(0, 1fr);
   align-items: baseline;
   gap: 2rem;
-  border-bottom: 1px solid rgba(48, 52, 58, 0.3);
-  padding-block: 1.45rem;
+  padding-block: 0 1.2rem;
 }
 
 .mono-market-case > span,
@@ -1070,8 +1070,7 @@ a {
   grid-template-columns: 3rem 12rem minmax(0, 1fr);
   align-items: baseline;
   gap: 1rem;
-  border-bottom: 1px solid rgba(48, 52, 58, 0.22);
-  padding-block: 1.1rem;
+  padding-block: 0.85rem;
 }
 
 .mono-execution-steps li > span {
@@ -1096,7 +1095,8 @@ a {
   display: grid;
   grid-template-columns: 12rem minmax(0, 1fr);
   gap: 2rem;
-  padding-block: 1.25rem;
+  margin-top: 0.4rem;
+  padding-block: 1rem 0.2rem;
 }
 
 .mono-skip-note p {
@@ -1124,7 +1124,6 @@ a {
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
-  border-bottom: 1px solid rgba(48, 52, 58, 0.24);
   padding: 1.15rem 1.25rem;
 }
 
@@ -1173,7 +1172,7 @@ a {
 }
 
 .mono-notes {
-  border-block: 1px solid var(--mono-ink);
+  border-block: none;
 }
 
 .mono-notes summary {
@@ -1215,7 +1214,6 @@ a {
 }
 
 .mono-notes-body {
-  border-top: 1px solid rgba(48, 52, 58, 0.24);
   padding-block: 2rem;
 }
 
@@ -1233,16 +1231,13 @@ a {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 2rem;
-  border-top: 1px solid rgba(48, 52, 58, 0.28);
 }
 
 .mono-notes-grid article {
-  border-bottom: 1px solid rgba(48, 52, 58, 0.24);
   padding: 1.5rem 1.5rem 1.5rem 0;
 }
 
 .mono-notes-grid article:nth-child(even) {
-  border-left: 1px solid rgba(48, 52, 58, 0.24);
   padding-left: 1.5rem;
 }
 
@@ -1291,7 +1286,6 @@ a {
 
 .mono-notes-grid-secondary article:nth-child(2),
 .mono-notes-grid-secondary article:nth-child(3) {
-  border-left: 1px solid rgba(48, 52, 58, 0.24);
   padding-left: 1.5rem;
 }
 
@@ -1307,7 +1301,6 @@ a {
   min-height: 5rem;
   align-items: center;
   gap: 1rem;
-  border-block: 1px solid rgba(48, 52, 58, 0.26);
   color: rgba(48, 52, 58, 0.76);
   font-size: 0.9rem;
   transition: color 160ms ease;
@@ -1470,14 +1463,14 @@ a {
   }
 
   .mono-lesson-cover {
-    padding-block: 1.5rem 3rem;
+    padding-block: 1.4rem 0.9rem;
   }
 
   .mono-lesson-grid {
     grid-template-columns: 4rem minmax(0, 1fr);
     gap: 1.2rem;
     min-height: auto;
-    padding-top: 3rem;
+    padding-top: 1.4rem;
   }
 
   .mono-lesson-number {
