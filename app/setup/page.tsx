@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { SiteFooter, SiteHeader } from "@/app/components/site-shell";
 import { SetupGate } from "@/app/setup/setup-gate";
@@ -18,7 +18,6 @@ export default function SetupPage() {
         <section className="border-b border-white/10">
           <div className="page-shell grid gap-12 py-16 lg:grid-cols-[.78fr_1.22fr] lg:py-24">
             <div>
-              <div className="eyebrow mb-7">OPEN SETUP 01 · NO LOGIN</div>
               <h1 className="text-5xl font-semibold leading-[.95] tracking-[-0.055em] text-white sm:text-7xl">
                 Level
                 <br />
@@ -34,12 +33,9 @@ export default function SetupPage() {
                 <div><span className="mb-2 block font-mono text-[10px] text-orange-400">TRIGGER</span>收复 + 收盘确认 + 回踩</div>
                 <div><span className="mb-2 block font-mono text-[10px] text-orange-400">INVALIDATION</span>重新接受于失效侧</div>
               </div>
-              <div className="mt-10 flex items-center gap-6">
-                <Link href="/playbook/sweep-reclaim" className="inline-flex items-center gap-2 text-sm text-orange-300 transition-colors hover:text-orange-200">
-                  先读完整 Setup 01 <ArrowRight className="size-4" />
+              <Link href="/playbook/sweep-reclaim" className="mt-10 inline-flex items-center gap-2 text-sm text-orange-300 transition-colors hover:text-orange-200">
+                  Setup 01 <ArrowRight className="size-4" />
                 </Link>
-                <ArrowDown className="size-5 text-white/22" />
-              </div>
             </div>
           </div>
         </section>

@@ -4,6 +4,10 @@ Five curated SPX 0DTE setups. Read the 5-minute market case, wait for the 1-minu
 
 中文说明见下方：[中文](#中文)
 
+## Preview
+
+Live site: [https://spx-setups.mmoptions.workers.dev/playbook/wall-rejection?lang=zh](https://spx-setups.mmoptions.workers.dev/playbook/wall-rejection?lang=zh)
+
 ## English
 
 SPX Setups is a concise field guide built from practical trading notes. It is a small, opinionated collection—not an encyclopedia and not a signal service.
@@ -67,6 +71,8 @@ For education and research only. Nothing in this repository is investment advice
 ---
 
 ## 中文
+
+预览地址：[https://spx-setups.mmoptions.workers.dev/playbook/wall-rejection?lang=zh](https://spx-setups.mmoptions.workers.dev/playbook/wall-rejection?lang=zh)
 
 SPX Setups 是一份精炼的 SPX 0DTE 实战笔记。它只整理五个常用场景，不追求覆盖所有形态，也不提供交易喊单。
 

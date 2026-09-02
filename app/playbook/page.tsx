@@ -38,7 +38,6 @@ export default async function PlaybookPage({ searchParams }: PlaybookPageProps) 
             </div>
             <div className="mono-cover-grid">
               <div className="mono-cover-title">
-                <p>{copy.heroEyebrow}</p>
                 <h1>
                   {copy.heroFirst} <em>5m</em>.
                   <br />
@@ -57,7 +56,6 @@ export default async function PlaybookPage({ searchParams }: PlaybookPageProps) 
         <section id="setups" className="mono-section scroll-mt-20">
           <div className="page-shell">
             <header className="mono-section-heading">
-              <span>{copy.indexLabel}</span>
               <h2>{copy.indexTitle}</h2>
             </header>
 
@@ -103,8 +101,7 @@ export default async function PlaybookPage({ searchParams }: PlaybookPageProps) 
 
         <section className="mono-section mono-section-quiet">
           <div className="page-shell">
-            <header className="mono-section-heading mono-section-heading-split">
-              <span>{copy.caseLabel}</span>
+            <header className="mono-section-heading">
               <h2>{copy.caseTitle}</h2>
             </header>
             <div className="mono-case-table" role="table" aria-label={copy.caseTableAria}>
@@ -127,7 +124,6 @@ export default async function PlaybookPage({ searchParams }: PlaybookPageProps) 
         <section className="mono-section">
           <div className="page-shell mono-rules-layout">
             <header className="mono-section-heading">
-              <span>{copy.rulesLabel}</span>
               <h2>{copy.rulesTitle}</h2>
             </header>
             <div className="mono-rules-list">

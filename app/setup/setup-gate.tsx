@@ -129,44 +129,29 @@ export function SetupGate() {
       <div className="grid gap-12 lg:grid-cols-[1.14fr_.86fr] lg:items-start">
         <div>
           <div className="mb-10 flex items-end justify-between gap-6">
-            <div>
-              <div className="eyebrow mb-4">RUN THE GATE</div>
-              <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">下单前，逐项回答。</h2>
-            </div>
+            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">下单前，逐项回答。</h2>
             <Button type="button" variant="ghost" onClick={reset} className="rounded-none text-xs text-white/36 hover:bg-white/5 hover:text-white">
               <RotateCcw /> 重置
             </Button>
           </div>
 
           <div className="gate-section">
-            <div className="mb-6 flex items-start gap-5">
-              <span className="font-mono text-xs text-orange-400">01</span>
-              <div><h3 className="font-medium text-white">交易方向</h3><p className="mt-1 text-sm text-white/36">不是预测涨跌，而是你要等待哪一侧被市场接受。</p></div>
-            </div>
+            <h3 className="mb-6 font-medium text-white">交易方向</h3>
             <ChoiceSet value={direction} onChange={setDirection} options={choices.direction} />
           </div>
 
           <div className="gate-section">
-            <div className="mb-6 flex items-start gap-5">
-              <span className="font-mono text-xs text-orange-400">02</span>
-              <div><h3 className="font-medium text-white">关键位来源</h3><p className="mt-1 text-sm text-white/36">盘前已经标记，而不是进场后为了持仓临时画出来。</p></div>
-            </div>
+            <h3 className="mb-6 font-medium text-white">关键位来源</h3>
             <ChoiceSet value={level} onChange={setLevel} options={choices.level} />
           </div>
 
           <div className="gate-section">
-            <div className="mb-6 flex items-start gap-5">
-              <span className="font-mono text-xs text-orange-400">03</span>
-              <div><h3 className="font-medium text-white">价格现在在哪里</h3><p className="mt-1 text-sm text-white/36">关键位附近不等于 Setup 成立。</p></div>
-            </div>
+            <h3 className="mb-6 font-medium text-white">价格现在在哪里</h3>
             <ChoiceSet value={position} onChange={setPosition} options={choices.position} />
           </div>
 
           <div className="gate-section">
-            <div className="mb-6 flex items-start gap-5">
-              <span className="font-mono text-xs text-orange-400">04</span>
-              <div><h3 className="font-medium text-white">触发是否完整</h3><p className="mt-1 text-sm text-white/36">三个条件缺一个，都只是在“快要形成”。</p></div>
-            </div>
+            <h3 className="mb-6 font-medium text-white">触发是否完整</h3>
             <div>
               {[
                 ["5 分钟 K 线已收在交易方向一侧", closeConfirmed, setCloseConfirmed],
@@ -182,10 +167,7 @@ export function SetupGate() {
           </div>
 
           <div className="gate-section">
-            <div className="mb-6 flex items-start gap-5">
-              <span className="font-mono text-xs text-orange-400">05</span>
-              <div><h3 className="font-medium text-white">风险是否在入场前锁定</h3><p className="mt-1 text-sm text-white/36">这里判断的是“能不能活着做下一笔”。</p></div>
-            </div>
+            <h3 className="mb-6 font-medium text-white">风险是否在入场前锁定</h3>
             <div className="grid gap-4 sm:grid-cols-2">
               <label className="text-xs text-white/42">
                 今日剩余风险预算（USD）
@@ -221,7 +203,7 @@ export function SetupGate() {
           <div className={`border ${ready ? "border-emerald-400/30 bg-emerald-400/[.035]" : "border-white/12 bg-white/[.025]"}`} aria-live="polite">
             <div className="border-b border-white/10 p-5">
               <div className="flex items-center justify-between font-mono text-[10px] tracking-[.16em] text-white/32">
-                <span>SETUP STATUS</span>
+                <span>STATUS</span>
                 <span>{completed} / {checklist.length}</span>
               </div>
               <Progress value={(completed / checklist.length) * 100} className="mt-4 h-1 rounded-none bg-white/8 [&_[data-slot=progress-indicator]]:bg-orange-500" />
@@ -233,18 +215,14 @@ export function SetupGate() {
                   <div className="mt-6 font-mono text-xs tracking-[.18em] text-emerald-300">SETUP READY</div>
                   <h3 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-white">条件完整，可以进入执行。</h3>
                   <p className="mt-4 leading-7 text-white/48">
-                    {direction === "bull" ? "向上收复" : "向下跌回"} · {level === "wall" ? "Options Wall" : level === "vwap" ? "VWAP" : "Session Level"}。使用预先定义风险的结构，失效就退出。
+                    {direction === "bull" ? "向上收复" : "向下跌回"} · {level === "wall" ? "Options Wall" : level === "vwap" ? "VWAP" : "Session Level"}。失效就退出。
                   </p>
-                  <div className="mt-6 border-l-2 border-emerald-400/50 pl-4 text-sm leading-7 text-white/56">
-                    通过门禁不代表这笔交易会赢，只代表你没有在缺少结构、触发或风险定义时下注。
-                  </div>
                 </>
               ) : (
                 <>
                   <AlertTriangle className="size-8 text-orange-400" />
                   <div className="mt-6 font-mono text-xs tracking-[.18em] text-orange-400">NO TRADE</div>
                   <h3 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-white">条件还不完整。</h3>
-                  <p className="mt-4 leading-7 text-white/44">等待也是一个完整的交易决定。当前还缺：</p>
                   <ul className="mt-5 space-y-3">
                     {reasons.slice(0, 5).map((reason) => (
                       <li key={reason} className="flex gap-3 text-sm text-white/58">
@@ -258,7 +236,7 @@ export function SetupGate() {
             </div>
           </div>
           <Link href="/playbook" className="mt-4 flex items-center justify-between border border-white/10 px-5 py-4 text-sm text-white/50 transition-colors hover:border-orange-400/35 hover:text-orange-300">
-            理解完整框架 <ArrowRight className="size-4" />
+            五个 Setup <ArrowRight className="size-4" />
           </Link>
         </aside>
       </div>

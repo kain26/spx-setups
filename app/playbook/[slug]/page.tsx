@@ -39,11 +39,11 @@ export default async function SetupLessonPage({
   const previous = index > 0 ? setups[index - 1] : null;
   const next = index < setups.length - 1 ? setups[index + 1] : null;
   const executionSteps = [
-    ["01", "5 MIN / READ", setup.quick.fiveMinute],
-    ["02", "1 MIN / TRIGGER", setup.quick.oneMinute],
-    ["03", "ENTRY / ACT", setup.quick.entry],
-    ["04", "STOP / INVALIDATE", setup.quick.stop],
-    ["05", "TARGET / MANAGE", setup.quick.target],
+    ["01", "5 MIN", setup.quick.fiveMinute],
+    ["02", "1 MIN", setup.quick.oneMinute],
+    ["03", "ENTRY", setup.quick.entry],
+    ["04", "STOP", setup.quick.stop],
+    ["05", "TARGET", setup.quick.target],
   ];
 
   return (
@@ -78,13 +78,9 @@ export default async function SetupLessonPage({
 
         <section className="mono-section mono-execution-section">
           <div className="page-shell">
-            <header className="mono-section-heading mono-section-heading-split">
-              <span>01 / EXECUTION SEQUENCE</span>
-              <h2>按顺序读，不跳步骤。</h2>
-            </header>
             <div className="mono-execution-sheet">
               <div className="mono-market-case">
-                <span>MARKET CASE</span>
+                <span>CASE</span>
                 <strong>{setup.quick.case}</strong>
               </div>
               <ol className="mono-execution-steps">
@@ -106,10 +102,6 @@ export default async function SetupLessonPage({
 
         <section className="mono-section mono-section-quiet">
           <div className="page-shell">
-            <header className="mono-section-heading mono-section-heading-split">
-              <span>02 / K-LINE MAP</span>
-              <h2>5m 看结构，1m 扣扳机。</h2>
-            </header>
             <div className="mono-charts">
               <CandlestickDiagram chart={setup.charts[0]} />
               <CandlestickDiagram chart={setup.charts[1]} />
@@ -122,8 +114,7 @@ export default async function SetupLessonPage({
           <div className="page-shell">
             <details className="mono-notes">
               <summary>
-                <span>03 / 完整说明</span>
-                <small>CONTEXT · 条件 · 期权结构</small>
+                <span>完整说明</span>
                 <ChevronDown />
               </summary>
               <div className="mono-notes-body">
