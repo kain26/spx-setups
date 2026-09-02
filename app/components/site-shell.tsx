@@ -75,18 +75,15 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
         community: "MYSPX",
       };
 
-  const mark = `inline-flex min-h-11 min-w-11 items-center justify-center border transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 ${paper ? "border-[#30343a]/24 text-[#30343a] hover:border-[#c65f38] hover:text-[#c65f38]" : "border-white/16 text-white/72 hover:border-orange-400 hover:text-orange-400"}`;
+  const mark = `inline-flex size-7 items-center justify-center border transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${paper ? "border-[#30343a]/16 text-[#30343a]/50 hover:border-[#c65f38] hover:text-[#c65f38]" : "border-white/12 text-white/50 hover:border-orange-400 hover:text-orange-400"}`;
 
   return (
-    <footer className={`border-t ${paper ? "border-[#30343a]/18" : "border-white/10"}`}>
-      <div className="page-shell grid gap-8 py-10 sm:grid-cols-[1fr_auto] sm:items-end">
-        <div>
-          <Brand tone={tone} />
-          <p className={`mt-5 max-w-xl text-xs leading-6 ${paper ? "text-[#30343a]/58" : "text-white/28"}`}>
-            {labels.disclaimer}
-          </p>
-        </div>
-        <div className="flex flex-wrap items-center gap-2 sm:justify-end">
+    <footer className={`border-t ${paper ? "border-[#30343a]/12" : "border-white/8"}`}>
+      <div className="page-shell flex items-center justify-between gap-4 py-4">
+        <p className={`min-w-0 truncate text-[11px] leading-none ${paper ? "text-[#30343a]/40" : "text-white/28"}`}>
+          {labels.disclaimer}
+        </p>
+        <div className="flex shrink-0 items-center gap-1.5">
           <a
             className={mark}
             href="https://myspx.trade"
@@ -98,9 +95,9 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
             <img
               src="/myspx-logo.png"
               alt=""
-              width={32}
-              height={28}
-              className="h-7 w-auto"
+              width={16}
+              height={14}
+              className="h-3.5 w-auto"
               style={{ imageRendering: "pixelated" }}
             />
           </a>
@@ -112,7 +109,7 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
             aria-label={labels.x}
             title="@mm_options"
           >
-            <svg viewBox="0 0 24 24" className="size-4" aria-hidden="true">
+            <svg viewBox="0 0 24 24" className="size-3" aria-hidden="true">
               <path
                 fill="currentColor"
                 d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"
