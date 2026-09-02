@@ -69,15 +69,11 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
   const labels = locale === "zh"
     ? {
         disclaimer: "仅供学习，非投资建议。",
-        x: "在 X 关注 @mm_options",
-        community: "MYSPX",
         compass: "SPX 罗盘",
         github: "GitHub 仓库",
       }
     : {
         disclaimer: "Education only. Not advice.",
-        x: "Follow @mm_options on X",
-        community: "MYSPX",
         compass: "SPX Compass",
         github: "GitHub repository",
       };
@@ -106,38 +102,6 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
               height={16}
               className="h-4 w-4 rounded-full object-cover"
             />
-          </a>
-          <a
-            className={mark}
-            href="https://myspx.trade"
-            target="_blank"
-            rel="noreferrer"
-            aria-label={labels.community}
-            title="myspx.trade"
-          >
-            <img
-              src="/myspx-logo.png"
-              alt=""
-              width={16}
-              height={14}
-              className="h-3.5 w-auto"
-              style={{ imageRendering: "pixelated" }}
-            />
-          </a>
-          <a
-            className={mark}
-            href="https://x.com/mm_options"
-            target="_blank"
-            rel="noreferrer"
-            aria-label={labels.x}
-            title="@mm_options"
-          >
-            <svg viewBox="0 0 24 24" className="size-3" aria-hidden="true">
-              <path
-                fill="currentColor"
-                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"
-              />
-            </svg>
           </a>
           <a
             className={mark}
