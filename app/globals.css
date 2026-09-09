@@ -1556,50 +1556,99 @@ a {
   }
 }
 
-.mono-community-note {
-  display: flex;
-  min-height: 2.75rem;
+.mono-community-wrap {
+  padding-block: 1.6rem 0.4rem;
+}
+
+.mono-community-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1.25rem;
-  border-top: 1px solid rgba(48, 52, 58, 0.16);
-  padding-block: 1rem;
-  color: rgba(48, 52, 58, 0.52);
+  gap: 1rem 1.15rem;
+  border: 1px solid rgba(48, 52, 58, 0.12);
+  background: rgba(255, 255, 255, 0.32);
+  padding: 1.35rem 1.45rem;
+  color: var(--mono-ink);
   text-decoration: none;
-  transition: color 160ms ease;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
 }
 
-.mono-community-note:hover,
-.mono-community-note:focus-visible {
-  color: var(--mono-accent);
+.mono-community-card:hover,
+.mono-community-card:focus-visible {
+  border-color: rgba(198, 95, 56, 0.42);
+  background: rgba(255, 255, 255, 0.55);
+  outline: none;
 }
 
-.mono-community-note img {
-  width: 1.15rem;
+.mono-community-card-mark {
+  width: 1.35rem;
   height: auto;
   flex: none;
-  opacity: 0.75;
+  image-rendering: pixelated;
 }
 
-.mono-community-note:hover img,
-.mono-community-note:focus-visible img {
-  opacity: 1;
-}
-
-.mono-community-note strong {
+.mono-community-card-copy strong {
   display: block;
+  color: var(--mono-ink);
+  font-family: var(--mono-display);
+  font-size: 1.22rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.28;
+}
+
+.mono-community-card-copy em {
+  display: block;
+  margin-top: 0.38rem;
+  color: rgba(48, 52, 58, 0.58);
   font-size: 0.84rem;
-  font-weight: 600;
   font-style: normal;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
 }
 
-.mono-community-note em {
-  display: block;
-  margin-top: 0.18rem;
+.mono-community-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--mono-ink);
+  font-family: var(--font-mono);
   font-size: 0.72rem;
-  font-style: normal;
-  letter-spacing: 0.02em;
-  opacity: 0.72;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.mono-community-card-cta svg {
+  width: 0.92rem;
+  color: var(--mono-accent);
+  transition: transform 160ms ease;
+}
+
+.mono-community-card:hover .mono-community-card-cta svg,
+.mono-community-card:focus-visible .mono-community-card-cta svg {
+  transform: translateX(0.18rem);
+}
+
+@media (max-width: 640px) {
+  .mono-community-wrap {
+    padding-block: 2.6rem 2.1rem;
+  }
+
+  .mono-community-card {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.85rem 0.95rem;
+    padding: 1.45rem 1.15rem 1.35rem;
+  }
+
+  .mono-community-card-copy strong {
+    font-size: 1.12rem;
+  }
+
+  .mono-community-card-cta {
+    grid-column: 1 / -1;
+    margin-top: 0.2rem;
+  }
 }

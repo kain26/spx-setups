@@ -155,27 +155,32 @@ export default async function SetupLessonPage({
         </section>
 
         {setup.slug === "compression-expansion" ? (
-          <div className="page-shell">
-            <a
-              href="https://myspx.trade"
-              target="_blank"
-              rel="noreferrer"
-              className="mono-community-note"
-            >
-              <img
-                src="/myspx-logo.png"
-                alt=""
-                width={18}
-                height={16}
-                className="h-4 w-auto"
-                style={{ imageRendering: "pixelated" }}
-              />
-              <span>
-                <strong>当天墙位、入场点、AI 把握</strong>
-                <em>盘前期权墙 · 雷神趋势 · 秃鹰震荡</em>
-              </span>
-            </a>
-          </div>
+          <section className="mono-community-wrap" aria-label="加入社区">
+            <div className="page-shell">
+              <a
+                href="https://myspx.trade"
+                target="_blank"
+                rel="noreferrer"
+                className="mono-community-card"
+              >
+                <img
+                  src="/myspx-logo.png"
+                  alt=""
+                  width={22}
+                  height={20}
+                  className="mono-community-card-mark"
+                />
+                <span className="mono-community-card-copy">
+                  <strong>一个人看盘太容易错过 Setup？</strong>
+                  <em>每日 SPX 墙位 · 实盘观察 · 群内讨论</em>
+                </span>
+                <span className="mono-community-card-cta">
+                  加入社区
+                  <ArrowRight aria-hidden="true" />
+                </span>
+              </a>
+            </div>
+          </section>
         ) : null}
 
         <nav className="page-shell mono-lesson-pagination" aria-label="Setup lessons">
