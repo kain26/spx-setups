@@ -154,7 +154,7 @@ export default async function SetupLessonPage({
           </div>
         </section>
 
-        {setup.slug === "compression-expansion" ? (
+        {setup.slug === "break-and-hold" || setup.slug === "compression-expansion" ? (
           <section className="mono-community-wrap" aria-label="加入社区">
             <div className="page-shell">
               <a
