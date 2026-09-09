@@ -35,7 +35,7 @@ export function Brand({ tone = "dark" }: { tone?: ShellTone }) {
   return (
     <Link href="/" className="group flex items-center gap-3" aria-label="SPX Setups home">
       <BrandMark paper={paper} />
-      <span className={`hidden text-sm font-semibold tracking-[.12em] min-[420px]:inline ${paper ? "text-[#30343a]" : "text-white"}`}>
+      <span className={`text-sm font-semibold tracking-[.12em] ${paper ? "text-[#30343a]" : "text-white"}`}>
         SPX SETUPS
       </span>
     </Link>
@@ -93,7 +93,7 @@ function HeaderSocials({ paper, locale }: { paper: boolean; locale: SiteLocale }
   );
 }
 
-export function SiteHeader({ tone = "dark", locale = "en", languageHref }: { tone?: ShellTone; locale?: SiteLocale; languageHref?: string }) {
+export function SiteHeader({ tone = "dark", locale = "en", languageHref, showSocials = false }: { tone?: ShellTone; locale?: SiteLocale; languageHref?: string; showSocials?: boolean }) {
   const paper = tone === "paper";
   const labels = locale === "zh"
     ? { setups: "5 Setups", nav: "主导航", language: "EN" }
@@ -107,7 +107,7 @@ export function SiteHeader({ tone = "dark", locale = "en", languageHref }: { ton
           <Link className={paper ? "nav-link nav-link-paper" : "nav-link"} href={locale === "zh" ? "/?lang=zh#setups" : "/#setups"}>{labels.setups}</Link>
         </nav>
         <div className="flex shrink-0 items-center gap-2.5">
-          <HeaderSocials paper={paper} locale={locale} />
+          {showSocials ? <HeaderSocials paper={paper} locale={locale} /> : null}
           <Button
             asChild
             className={`h-9 rounded-none px-4 font-mono text-sm tracking-[.08em] ${paper ? "bg-[#30343a] text-[#e9e9e5] hover:bg-[#c65f38]" : "bg-white text-black hover:bg-orange-400"}`}

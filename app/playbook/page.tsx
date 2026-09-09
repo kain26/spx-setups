@@ -27,6 +27,7 @@ export default async function PlaybookPage({ searchParams }: PlaybookPageProps) 
         tone="paper"
         locale={locale}
         languageHref={isChinese ? "/" : "/?lang=zh"}
+        showSocials
       />
       <main>
         <section className="mono-cover">
