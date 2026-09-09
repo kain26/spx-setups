@@ -7,6 +7,8 @@ type SiteLocale = "en" | "zh";
 
 const COMPASS_URL =
   "https://spx-price-action-compass-773950940183.europe-west2.run.app/";
+const DISCORD_URL = "https://discord.gg/Yp9UrBaWe9";
+const X_URL = "https://x.com/mm_options";
 
 function BrandMark({ paper }: { paper: boolean }) {
   return (
@@ -33,10 +35,61 @@ export function Brand({ tone = "dark" }: { tone?: ShellTone }) {
   return (
     <Link href="/" className="group flex items-center gap-3" aria-label="SPX Setups home">
       <BrandMark paper={paper} />
-      <span className={`text-sm font-semibold tracking-[.12em] ${paper ? "text-[#30343a]" : "text-white"}`}>
+      <span className={`hidden text-sm font-semibold tracking-[.12em] min-[420px]:inline ${paper ? "text-[#30343a]" : "text-white"}`}>
         SPX SETUPS
       </span>
     </Link>
+  );
+}
+
+function socialMarkClass(paper: boolean) {
+  return `inline-flex size-8 items-center justify-center border transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${
+    paper
+      ? "border-[#30343a]/16 text-[#30343a]/55 hover:border-[#c65f38] hover:text-[#c65f38]"
+      : "border-white/12 text-white/55 hover:border-orange-400 hover:text-orange-400"
+  }`;
+}
+
+function HeaderSocials({ paper, locale }: { paper: boolean; locale: SiteLocale }) {
+  const labels = locale === "zh"
+    ? { discord: "加入 Discord", x: "X @mm_options" }
+    : { discord: "Join Discord", x: "X @mm_options" };
+  const mark = socialMarkClass(paper);
+
+  return (
+    <div className="flex items-center gap-1.5">
+      <a
+        className={mark}
+        href={DISCORD_URL}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={labels.discord}
+        title={labels.discord}
+      >
+        <svg viewBox="0 0 24 24" className="size-4" aria-hidden="true">
+          <path
+            fill="currentColor"
+            fillRule="evenodd"
+            d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 0-1.872-.892.077.077 0 0 0-.085.038 10.2 10.2 0 0 1-1.31.818.077.077 0 0 1-.079-.01c.05-.04.1-.08.148-.12a.074.074 0 0 1 .078-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.05.04.098.08.148.12a.077.077 0 0 1-.079.01 12.3 12.3 0 0 1-1.31-.818.077.077 0 0 0-.085-.038 13.3 13.3 0 0 0-1.872.892.077.077 0 0 0-.041.106c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03ZM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418Zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"
+          />
+        </svg>
+      </a>
+      <a
+        className={mark}
+        href={X_URL}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={labels.x}
+        title={labels.x}
+      >
+        <svg viewBox="0 0 24 24" className="size-4" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+          />
+        </svg>
+      </a>
+    </div>
   );
 }
 
@@ -48,17 +101,20 @@ export function SiteHeader({ tone = "dark", locale = "en", languageHref }: { ton
 
   return (
     <header className={`sticky top-0 z-50 border-b backdrop-blur-xl ${paper ? "border-[#30343a]/18 bg-[#e9e9e5]/92" : "border-white/10 bg-[#09090a]/88"}`}>
-      <div className="page-shell flex h-[72px] items-center justify-between">
+      <div className="page-shell flex h-[72px] items-center justify-between gap-3">
         <Brand tone={tone} />
         <nav className="hidden items-center gap-8 md:flex" aria-label={labels.nav}>
           <Link className={paper ? "nav-link nav-link-paper" : "nav-link"} href={locale === "zh" ? "/?lang=zh#setups" : "/#setups"}>{labels.setups}</Link>
         </nav>
-        <Button
-          asChild
-          className={`h-9 rounded-none px-4 font-mono text-sm tracking-[.08em] ${paper ? "bg-[#30343a] text-[#e9e9e5] hover:bg-[#c65f38]" : "bg-white text-black hover:bg-orange-400"}`}
-        >
-          <Link href={languageHref ?? "/#setups"}>{languageHref ? labels.language : "SETUPS / 05"}</Link>
-        </Button>
+        <div className="flex shrink-0 items-center gap-2.5">
+          <HeaderSocials paper={paper} locale={locale} />
+          <Button
+            asChild
+            className={`h-9 rounded-none px-4 font-mono text-sm tracking-[.08em] ${paper ? "bg-[#30343a] text-[#e9e9e5] hover:bg-[#c65f38]" : "bg-white text-black hover:bg-orange-400"}`}
+          >
+            <Link href={languageHref ?? "/#setups"}>{languageHref ? labels.language : "SETUPS / 05"}</Link>
+          </Button>
+        </div>
       </div>
     </header>
   );
