@@ -151,18 +151,12 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
           <PageViewCount locale={locale} />
           <div className="flex shrink-0 items-center gap-1.5">
           <a
-            className={mark}
+            className={`${mark} w-auto min-w-7 px-1.5 font-mono text-[10px] font-semibold tracking-[0.12em]`}
             href={LAB_URL}
             aria-label={labels.lab}
             title={labels.lab}
           >
-            <img
-              src="/myspx-logo.png"
-              alt=""
-              width={16}
-              height={16}
-              className="h-4 w-4 object-contain"
-            />
+            Lab
           </a>
           <a
             className={mark}
