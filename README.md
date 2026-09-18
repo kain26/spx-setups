@@ -74,7 +74,7 @@ Personal market observations only. Nothing in this repository is a validated sig
 
 ## 中文
 
-预览地址：[https://spx-setups.mmoptions.workers.dev/playbook/wall-rejection?lang=zh](https://spx-setups.mmoptions.workers.dev/playbook/wall-rejection?lang=zh)
+预览地址：[https://spx-setups.mmoptions.workers.dev](https://spx-setups.mmoptions.workers.dev)
 
 SPX Setups 是一份 SPX 0DTE 实战观察笔记。全部 Setup 都是未经完整历史回测的实验性观察，不是经过验证的交易系统，也不提供交易喊单。
 
