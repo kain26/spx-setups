@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { AlertTriangle, ArrowRight } from "lucide-react";
 
 import { SiteFooter, SiteHeader } from "@/app/components/site-shell";
-import { decisionRows, hardRules, homeCopy, setupCopyEn, type HomeLocale } from "@/app/playbook/home-copy";
+import { decisionRows, homeCopy, setupCopyEn, type HomeLocale } from "@/app/playbook/home-copy";
 import { setups } from "@/app/playbook/setups";
 
 export const metadata: Metadata = {
   title: { absolute: "SPX Setups" },
-  description: "Five curated SPX 0DTE setups: read the 5-minute market case, then execute the 1-minute trigger.",
+  description: "Six experimental SPX 0DTE setups for observation and study. None has validated historical results.",
 };
 
 type PlaybookPageProps = {
@@ -46,7 +46,7 @@ export default async function PlaybookPage({ searchParams }: PlaybookPageProps) 
                 </h1>
               </div>
               <div className="mono-cover-count" aria-label={copy.countAria}>
-                <strong>05</strong>
+                <strong>06</strong>
                 <span>{copy.countLabel}</span>
                 <p>{copy.flow}</p>
               </div>
@@ -59,6 +59,17 @@ export default async function PlaybookPage({ searchParams }: PlaybookPageProps) 
             <header className="mono-section-heading">
               <h2>{copy.indexTitle}</h2>
             </header>
+            <aside className="mono-experimental-warning mono-all-setups-note" role="note">
+              <AlertTriangle aria-hidden="true" />
+              <div>
+                <strong>{isChinese ? "所有 SETUP 均为实验性观察" : "ALL SETUPS ARE EXPERIMENTAL"}</strong>
+                <p>
+                  {isChinese
+                    ? "以下内容均未经过完整历史回测，没有经验证的胜率或期望值，不保证有效，也不构成直接入场信号。"
+                    : "None of the setups below has complete historical backtesting, a validated win rate, or proven expectancy. They may fail and are not direct entry signals."}
+                </p>
+              </div>
+            </aside>
 
             <div className="mono-setup-list">
               {setups.map((setup) => {
@@ -96,6 +107,28 @@ export default async function PlaybookPage({ searchParams }: PlaybookPageProps) 
                 </Link>
                 );
               })}
+              <Link href="/playbook/magic-13-21-turn" className="mono-setup-row group">
+                <div className="mono-setup-name">
+                  <span>06 / SINGLE INDICATOR · TURN WATCH</span>
+                  <h3>Magic 13–21 Turn</h3>
+                  <p>{isChinese ? "神奇 13–21 转" : "13–21 reversal watch"}</p>
+                </div>
+                <div className="mono-setup-case">
+                  <span>CASE</span>
+                  <p>{isChinese ? "连续下跌后的潜在节奏转折。" : "A potential rhythm turn after a sustained decline."}</p>
+                </div>
+                <dl className="mono-setup-timeframes">
+                  <div>
+                    <dt>5m</dt>
+                    <dd>{isChinese ? "极端行情观察 9 转（约 45 根 1m）或 13 转。" : "In extremes, watch 9 (about 45 one-minute bars) or 13."}</dd>
+                  </div>
+                  <div>
+                    <dt>1m</dt>
+                    <dd>{isChinese ? "震荡式下跌看 13；单边下跌看 21。" : "Watch 13 in a choppy decline and 21 in a one-way selloff."}</dd>
+                  </div>
+                </dl>
+                <ArrowRight aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </section>
@@ -122,22 +155,6 @@ export default async function PlaybookPage({ searchParams }: PlaybookPageProps) 
           </div>
         </section>
 
-        <section className="mono-section">
-          <div className="page-shell mono-rules-layout">
-            <header className="mono-section-heading">
-              <h2>{copy.rulesTitle}</h2>
-            </header>
-            <div className="mono-rules-list">
-              {hardRules[locale].map(([label, rule], index) => (
-                <div key={label} className="mono-rule-row">
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <strong>{label}</strong>
-                  <p>{rule}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
       </main>
       <SiteFooter tone="paper" locale={locale} />
     </div>

@@ -96,8 +96,8 @@ function HeaderSocials({ paper, locale }: { paper: boolean; locale: SiteLocale }
 export function SiteHeader({ tone = "dark", locale = "en", languageHref, showSocials = false }: { tone?: ShellTone; locale?: SiteLocale; languageHref?: string; showSocials?: boolean }) {
   const paper = tone === "paper";
   const labels = locale === "zh"
-    ? { setups: "5 Setups", nav: "主导航", language: "EN" }
-    : { setups: "5 Setups", nav: "Primary navigation", language: "中文" };
+    ? { setups: "6 Setups", nav: "主导航", language: "EN" }
+    : { setups: "6 Setups", nav: "Primary navigation", language: "中文" };
 
   return (
     <header className={`sticky top-0 z-50 border-b backdrop-blur-xl ${paper ? "border-[#30343a]/18 bg-[#e9e9e5]/92" : "border-white/10 bg-[#09090a]/88"}`}>
@@ -112,7 +112,7 @@ export function SiteHeader({ tone = "dark", locale = "en", languageHref, showSoc
             asChild
             className={`h-9 rounded-none px-4 font-mono text-sm tracking-[.08em] ${paper ? "bg-[#30343a] text-[#e9e9e5] hover:bg-[#c65f38]" : "bg-white text-black hover:bg-orange-400"}`}
           >
-            <Link href={languageHref ?? "/#setups"}>{languageHref ? labels.language : "SETUPS / 05"}</Link>
+            <Link href={languageHref ?? "/#setups"}>{languageHref ? labels.language : "SETUPS / 06"}</Link>
           </Button>
         </div>
       </div>
@@ -124,12 +124,12 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
   const paper = tone === "paper";
   const labels = locale === "zh"
     ? {
-        disclaimer: "仅供学习，非投资建议。",
+        disclaimer: "个人市场观察记录，不构成投资建议。",
         compass: "SPX 罗盘",
         github: "GitHub 仓库",
       }
     : {
-        disclaimer: "Education only. Not advice.",
+        disclaimer: "Personal market observations. Not advice.",
         compass: "SPX Compass",
         github: "GitHub repository",
       };

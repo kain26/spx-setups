@@ -1,6 +1,6 @@
 # SPX Setups
 
-Five curated SPX 0DTE setups. Read the 5-minute market case, wait for the 1-minute trigger, and define risk before entry.
+Six experimental SPX 0DTE setups for observation and study. None has validated historical results or a guaranteed edge.
 
 中文说明见下方：[中文](#中文)
 
@@ -10,7 +10,7 @@ Live site: [https://spx-setups.mmoptions.workers.dev/playbook/wall-rejection?lan
 
 ## English
 
-SPX Setups is a concise field guide built from practical trading notes. It is a small, opinionated collection—not an encyclopedia and not a signal service.
+SPX Setups is a concise field guide built from practical trading notes. Every setup is experimental and unbacktested—not a validated system or a signal service.
 
 ### Included setups
 
@@ -21,6 +21,7 @@ SPX Setups is a concise field guide built from practical trading notes. It is a 
 | 03 | VWAP Pullback | An established trend makes its first or second orderly VWAP pullback. |
 | 04 | Wall Rejection | A range edge or option wall rejects price back into balance. |
 | 05 | Compression Expansion | 5m ranges compress before a break and a 1m continuation pattern. |
+| 06 | Magic 13–21 Turn | Watch 1m 13 / 21 after a decline; in extremes, watch 5m 9 / 13. |
 
 ### Reading sequence
 
@@ -67,7 +68,7 @@ Do not run the OpenNext migration. This project uses vinext and produces
 
 ### Disclaimer
 
-For education and research only. Nothing in this repository is investment advice. SPX 0DTE options carry extreme risk.
+Personal market observations only. Nothing in this repository is a validated signal or investment advice.
 
 ---
 
@@ -75,7 +76,7 @@ For education and research only. Nothing in this repository is investment advice
 
 预览地址：[https://spx-setups.mmoptions.workers.dev/playbook/wall-rejection?lang=zh](https://spx-setups.mmoptions.workers.dev/playbook/wall-rejection?lang=zh)
 
-SPX Setups 是一份精炼的 SPX 0DTE 实战笔记。它只整理五个常用场景，不追求覆盖所有形态，也不提供交易喊单。
+SPX Setups 是一份 SPX 0DTE 实战观察笔记。全部 Setup 都是未经完整历史回测的实验性观察，不是经过验证的交易系统，也不提供交易喊单。
 
 ### 包含的 Setup
 
@@ -86,6 +87,7 @@ SPX Setups 是一份精炼的 SPX 0DTE 实战笔记。它只整理五个常用�
 | 03 | VWAP Pullback | 趋势建立后，第一次或第二次有序回踩 VWAP。 |
 | 04 | Wall Rejection | 区间边界或期权墙拒绝价格，随后回到平衡区。 |
 | 05 | Compression Expansion | 5 分钟波动持续压缩，突破后出现 1 分钟延续结构。 |
+| 06 | Magic 13–21 Turn | 下跌后观察 1m 13 / 21；极端行情观察 5m 9 / 13。 |
 
 ### 阅读顺序
 

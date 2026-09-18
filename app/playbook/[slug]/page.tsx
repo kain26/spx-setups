@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, ChevronDown } from "lucide-react";
+import { AlertTriangle, ArrowLeft, ArrowRight, ChevronDown } from "lucide-react";
 
 import { SiteFooter, SiteHeader } from "@/app/components/site-shell";
 import { CandlestickDiagram } from "@/app/playbook/components/candlestick-diagram";
@@ -78,6 +78,13 @@ export default async function SetupLessonPage({
 
         <section className="mono-section mono-execution-section">
           <div className="page-shell">
+            <aside className="mono-experimental-warning mono-setup-disclaimer" role="note">
+              <AlertTriangle aria-hidden="true" />
+              <div>
+                <strong>实验性观察 · 未经历史回测</strong>
+                <p>这个 Setup 没有经验证的胜率或期望值，不保证有效。请把它当作观察框架，而不是直接入场指令。</p>
+              </div>
+            </aside>
             <div className="mono-execution-sheet">
               <div className="mono-market-case">
                 <span>CASE</span>
@@ -196,8 +203,8 @@ export default async function SetupLessonPage({
               <ArrowRight />
             </Link>
           ) : (
-            <Link href="/#setups" className="mono-lesson-nav mono-lesson-nav-next">
-              <span><small>FINISH</small>返回全部 Setup</span>
+            <Link href="/playbook/magic-13-21-turn" className="mono-lesson-nav mono-lesson-nav-next">
+              <span><small>NEXT</small>06 / Magic 13–21 Turn</span>
               <ArrowRight />
             </Link>
           )}

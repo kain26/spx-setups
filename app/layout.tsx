@@ -7,7 +7,7 @@ export const metadata: Metadata = {
       default: "SPX Setups",
       template: "%s · SPX Setups",
     },
-    description: "Five curated SPX 0DTE setups: read the 5-minute market case, then execute the 1-minute trigger.",
+    description: "Six experimental SPX 0DTE setups for observation and study. No setup has validated historical results.",
     keywords: ["SPX", "0DTE", "Options", "VWAP", "Gamma", "Options Wall", "交易框架"],
     authors: [{ name: "SPX Setups", url: "https://myspx.trade" }],
     creator: "@mm_options",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       locale: "en_US",
       siteName: "SPX Setups",
       title: "SPX Setups",
-      description: "5 Cases · 5 Setups · 5m Context → 1m Trigger",
+      description: "6 Experimental Setups · Observation → Confirmation → Risk",
       images: [
         {
           url: "/og.png",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     twitter: {
       card: "summary_large_image",
       title: "SPX Setups",
-      description: "5 Cases · 5 Setups · 5m Context → 1m Trigger",
+      description: "6 Experimental Setups · Observation → Confirmation → Risk",
       creator: "@mm_options",
       images: ["/og.png"],
     },
