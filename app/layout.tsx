@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+const siteUrl = "https://spx-setups.mmoptions.workers.dev";
+
 export const metadata: Metadata = {
-    metadataBase: new URL("https://myspx-playbook.ioou.chatgpt.site"),
+    metadataBase: new URL(siteUrl),
     title: {
       default: "SPX Setups",
       template: "%s · SPX Setups",
@@ -14,15 +16,16 @@ export const metadata: Metadata = {
     openGraph: {
       type: "website",
       locale: "en_US",
+      url: "/",
       siteName: "SPX Setups",
       title: "SPX Setups",
       description: "6 Experimental Setups · Observation → Confirmation → Risk",
       images: [
         {
-          url: "/og.png",
+          url: "/og.png?v=20260918",
           width: 1200,
           height: 630,
-          alt: "SPX Setups",
+          alt: "SPX Setups — Read 5m. Execute 1m.",
         },
       ],
     },
@@ -31,7 +34,7 @@ export const metadata: Metadata = {
       title: "SPX Setups",
       description: "6 Experimental Setups · Observation → Confirmation → Risk",
       creator: "@mm_options",
-      images: ["/og.png"],
+      images: ["/og.png?v=20260918"],
     },
     icons: {
       icon: "/favicon.svg",
