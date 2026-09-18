@@ -8,7 +8,7 @@ Six experimental SPX 0DTE setups for observation and study. None has validated h
 
 Live site: [https://setups.myspx.trade](https://setups.myspx.trade)
 
-Previous preview (other Cloudflare account): [https://spx-setups.mmoptions.workers.dev](https://spx-setups.mmoptions.workers.dev)
+Also: [https://spx-setups.mmoptions.workers.dev](https://spx-setups.mmoptions.workers.dev)
 
 ## English
 
@@ -79,7 +79,7 @@ Personal market observations only. Nothing in this repository is a validated sig
 
 线上地址：[https://setups.myspx.trade](https://setups.myspx.trade)
 
-旧预览（另一个 Cloudflare 账号）：[https://spx-setups.mmoptions.workers.dev](https://spx-setups.mmoptions.workers.dev)
+备用：[https://spx-setups.mmoptions.workers.dev](https://spx-setups.mmoptions.workers.dev)
 
 SPX Setups 是一份 SPX 0DTE 实战观察笔记。全部 Setup 都是未经完整历史回测的实验性观察，不是经过验证的交易系统，也不提供交易喊单。
 
