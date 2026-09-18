@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const siteUrl = "https://spx-setups.mmoptions.workers.dev";
+const siteUrl = "https://setups.myspx.trade";
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),

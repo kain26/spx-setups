@@ -6,7 +6,9 @@ Six experimental SPX 0DTE setups for observation and study. None has validated h
 
 ## Preview
 
-Live site: [https://spx-setups.mmoptions.workers.dev/playbook/wall-rejection?lang=zh](https://spx-setups.mmoptions.workers.dev/playbook/wall-rejection?lang=zh)
+Live site: [https://setups.myspx.trade](https://setups.myspx.trade)
+
+Previous preview (other Cloudflare account): [https://spx-setups.mmoptions.workers.dev](https://spx-setups.mmoptions.workers.dev)
 
 ## English
 
@@ -62,6 +64,7 @@ Do not run the OpenNext migration. This project uses vinext and produces
 
 ### Links
 
+- Live: [setups.myspx.trade](https://setups.myspx.trade)
 - Community: [myspx.trade](https://myspx.trade)
 - X: [@mm_options](https://x.com/mm_options)
 - SPX Compass: [live](https://spx-price-action-compass-773950940183.europe-west2.run.app/) · [GitHub](https://github.com/kain26/SPX-Price-Action-Compass)
@@ -74,7 +77,9 @@ Personal market observations only. Nothing in this repository is a validated sig
 
 ## 中文
 
-预览地址：[https://spx-setups.mmoptions.workers.dev](https://spx-setups.mmoptions.workers.dev)
+线上地址：[https://setups.myspx.trade](https://setups.myspx.trade)
+
+旧预览（另一个 Cloudflare 账号）：[https://spx-setups.mmoptions.workers.dev](https://spx-setups.mmoptions.workers.dev)
 
 SPX Setups 是一份 SPX 0DTE 实战观察笔记。全部 Setup 都是未经完整历史回测的实验性观察，不是经过验证的交易系统，也不提供交易喊单。
 
@@ -128,6 +133,7 @@ npm run deploy
 
 ### 链接
 
+- 线上：[setups.myspx.trade](https://setups.myspx.trade)
 - 社区主站：[myspx.trade](https://myspx.trade)
 - X：[@mm_options](https://x.com/mm_options)
 - SPX 罗盘：[在线](https://spx-price-action-compass-773950940183.europe-west2.run.app/) · [GitHub](https://github.com/kain26/SPX-Price-Action-Compass)
