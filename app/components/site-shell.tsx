@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { PageViewCount } from "@/app/components/page-view-count";
 import { Button } from "@/components/ui/button";
 
 type ShellTone = "dark" | "paper";
@@ -142,7 +143,9 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
         <p className={`min-w-0 truncate text-[11px] leading-none ${paper ? "text-[#30343a]/40" : "text-white/28"}`}>
           {labels.disclaimer}
         </p>
-        <div className="flex shrink-0 items-center gap-1.5">
+        <div className="flex shrink-0 items-center gap-3">
+          <PageViewCount locale={locale} />
+          <div className="flex shrink-0 items-center gap-1.5">
           <a
             className={mark}
             href={COMPASS_URL}
@@ -174,6 +177,7 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
               />
             </svg>
           </a>
+          </div>
         </div>
       </div>
     </footer>

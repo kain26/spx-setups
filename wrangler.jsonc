@@ -11,6 +11,20 @@
     "directory": "./dist/client",
     "binding": "ASSETS"
   },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "PAGE_VIEW_COUNTER",
+        "class_name": "PageViewCounter"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["PageViewCounter"]
+    }
+  ],
   "observability": {
     "enabled": true
   }
