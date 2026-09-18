@@ -8,6 +8,7 @@ type SiteLocale = "en" | "zh";
 
 const COMPASS_URL =
   "https://spx-price-action-compass-773950940183.europe-west2.run.app/";
+const LAB_URL = "https://myspx.trade/";
 const DISCORD_URL = "https://discord.gg/Yp9UrBaWe9";
 const X_URL = "https://x.com/mm_options";
 
@@ -97,8 +98,8 @@ function HeaderSocials({ paper, locale }: { paper: boolean; locale: SiteLocale }
 export function SiteHeader({ tone = "dark", locale = "en", languageHref, showSocials = false }: { tone?: ShellTone; locale?: SiteLocale; languageHref?: string; showSocials?: boolean }) {
   const paper = tone === "paper";
   const labels = locale === "zh"
-    ? { setups: "6 Setups", nav: "主导航", language: "EN" }
-    : { setups: "6 Setups", nav: "Primary navigation", language: "中文" };
+    ? { setups: "6 Setups", lab: "Lab", nav: "主导航", language: "EN" }
+    : { setups: "6 Setups", lab: "Lab", nav: "Primary navigation", language: "中文" };
 
   return (
     <header className={`sticky top-0 z-50 border-b backdrop-blur-xl ${paper ? "border-[#30343a]/18 bg-[#e9e9e5]/92" : "border-white/10 bg-[#09090a]/88"}`}>
@@ -106,6 +107,7 @@ export function SiteHeader({ tone = "dark", locale = "en", languageHref, showSoc
         <Brand tone={tone} />
         <nav className="hidden items-center gap-8 md:flex" aria-label={labels.nav}>
           <Link className={paper ? "nav-link nav-link-paper" : "nav-link"} href={locale === "zh" ? "/?lang=zh#setups" : "/#setups"}>{labels.setups}</Link>
+          <a className={paper ? "nav-link nav-link-paper" : "nav-link"} href={LAB_URL}>{labels.lab}</a>
         </nav>
         <div className="flex shrink-0 items-center gap-2.5">
           {showSocials ? <HeaderSocials paper={paper} locale={locale} /> : null}
@@ -127,11 +129,13 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
     ? {
         disclaimer: "个人市场观察记录，不构成投资建议。",
         compass: "SPX 罗盘",
+        lab: "Lab",
         github: "GitHub 仓库",
       }
     : {
         disclaimer: "Personal market observations. Not advice.",
         compass: "SPX Compass",
+        lab: "Lab",
         github: "GitHub repository",
       };
 
@@ -146,6 +150,20 @@ export function SiteFooter({ tone = "dark", locale = "en" }: { tone?: ShellTone;
         <div className="flex shrink-0 items-center gap-3">
           <PageViewCount locale={locale} />
           <div className="flex shrink-0 items-center gap-1.5">
+          <a
+            className={mark}
+            href={LAB_URL}
+            aria-label={labels.lab}
+            title={labels.lab}
+          >
+            <img
+              src="/myspx-logo.png"
+              alt=""
+              width={16}
+              height={16}
+              className="h-4 w-4 object-contain"
+            />
+          </a>
           <a
             className={mark}
             href={COMPASS_URL}
