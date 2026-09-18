@@ -43,8 +43,11 @@ export const setupCopyEn: Record<string, SetupSummary> = {
 export const homeCopy = {
   en: {
     heroMeta: "EXPERIMENTAL SETUPS · V1.1",
-    heroFirst: "Read",
-    heroSecond: "Execute",
+    method: "Read 5m. Execute 1m.",
+    heroFirst: "Amateurs hunt entries.",
+    heroSecondLead: "Professionals wait for ",
+    heroEm: "location",
+    heroSecondTail: ".",
     countAria: "Six experimental setups",
     countLabel: "SETUPS",
     flow: "Risk → Location → Confirmation",
@@ -55,8 +58,11 @@ export const homeCopy = {
   },
   zh: {
     heroMeta: "实验性 SETUPS · V1.1",
-    heroFirst: "先看",
-    heroSecond: "再做",
+    method: "先看 5m。再做 1m。",
+    heroFirst: "新手猜涨跌，",
+    heroSecondLead: "老手等",
+    heroEm: "位置",
+    heroSecondTail: "。",
     countAria: "六个实验性 Setup",
     countLabel: "SETUPS",
     flow: "风险 → 位置 → 确认",

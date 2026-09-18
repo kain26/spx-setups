@@ -32,17 +32,25 @@
     .grid {
       flex: 1;
       display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 40px;
+      grid-template-columns: 1fr 260px;
+      gap: 36px;
       align-items: center;
-      padding-top: 12px;
+      padding-top: 8px;
+    }
+    .title p {
+      margin: 0 0 18px;
+      color: #c65f38;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 16px;
+      letter-spacing: 0.14em;
     }
     h1 {
       margin: 0;
-      font-size: 92px;
+      max-width: 11.5em;
+      font-size: 58px;
       font-weight: 600;
-      letter-spacing: -0.055em;
-      line-height: 0.92;
+      letter-spacing: -0.045em;
+      line-height: 1.08;
     }
     h1 em {
       color: #c65f38;
@@ -84,6 +92,10 @@
       color: #c65f38;
       letter-spacing: 0.08em;
     }
+    .zh {
+      font-family: "Songti SC", "Iowan Old Style", "PingFang SC", Georgia, serif;
+      letter-spacing: 0.04em;
+    }
   </style>
 </head>
 <body>
@@ -93,14 +105,17 @@
     <span>ET SESSION</span>
   </div>
   <div class="grid">
-    <h1>Read <em>5m</em>.<br />Execute <em>1m</em>.</h1>
+    <div class="title">
+      <p>READ 5M · EXECUTE 1M</p>
+      <h1>Amateurs hunt entries.<br />Professionals wait for <em>location</em>.</h1>
+    </div>
     <div class="count">
       <strong>06</strong>
       <span>SETUPS</span>
     </div>
   </div>
   <div class="foot">
-    <span>01 Sweep · 02 Hold · 03 VWAP · 04 Wall · 05 Compress · 06 Turn</span>
+    <span class="zh">新手猜涨跌，老手等位置。</span>
     <span class="flow">Observation → Confirmation → Risk</span>
   </div>
 </body>

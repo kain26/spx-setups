@@ -38,11 +38,14 @@ export default async function PlaybookPage({ searchParams }: PlaybookPageProps) 
               <span>ET SESSION</span>
             </div>
             <div className="mono-cover-grid">
-              <div className="mono-cover-title">
+              <div className="mono-cover-title thesis">
+                <p>{copy.method}</p>
                 <h1>
-                  {copy.heroFirst} <em>5m</em>.
+                  {copy.heroFirst}
                   <br />
-                  {copy.heroSecond} <em>1m</em>.
+                  {copy.heroSecondLead}
+                  <em>{copy.heroEm}</em>
+                  {copy.heroSecondTail}
                 </h1>
               </div>
               <div className="mono-cover-count" aria-label={copy.countAria}>
