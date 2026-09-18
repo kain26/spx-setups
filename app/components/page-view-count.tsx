@@ -46,10 +46,6 @@ export function PageViewCount({ locale = "en" }: { locale?: "en" | "zh" }) {
 
   return (
     <span className="page-view-count" aria-live="polite">
-      <span className="page-view-mark" aria-hidden="true">
-        <i />
-        <i />
-      </span>
       <span>{isChinese ? "已翻阅" : "Read"}</span>
       <strong>{formatted}</strong>
       <small>{isChinese ? "次" : "times"}</small>

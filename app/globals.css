@@ -629,24 +629,6 @@ a {
   white-space: nowrap;
 }
 
-.page-view-mark {
-  display: inline-flex;
-  gap: 4px;
-  align-self: center;
-  margin-right: 2px;
-}
-
-.page-view-mark i {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #9d3f35;
-}
-
-.page-view-mark i:last-child {
-  background: #1f6b53;
-}
-
 .page-view-count strong {
   color: #1f6b53;
   font-family: var(--mono-display);
